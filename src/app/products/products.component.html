@@ -1,0 +1,76 @@
+<div class="span9">
+  <div class="content">
+
+    <div class="module">
+      <div class="module-head">
+        <h3>Ajouter un produit</h3>
+      </div>
+      <div class="module-body">
+         <form class="form-horizontal row-fluid" [formGroup]="productForm" (ngSubmit)="productSubmit()">
+         <hr>
+          <div class="control-group">
+            <label class="control-label" for="name">Nom du produit</label>
+            <div class="controls">
+              <input id="name" type="text" 
+               placeholder="Nom du produit" 
+                class="span8 tip"
+                formControlName="name"
+                >
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="quantity">Quantity</label>
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on">#</span>
+                <input id="quantity" 
+                class="span8" 
+                type="text"
+                 placeholder="Quantity"
+                 formControlName="quantity">
+              </div>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="price">Prix</label>
+            <div class="controls">
+              <div class="input-append">
+                <input  id="price" type="text" placeholder="5.000"  class="span8"  formControlName="price">
+                <span class="add-on">$</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="control-group">
+            <div class="controls">
+              <button type="submit" class="btn btn-primary btn-lg">Valider</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="module">
+      <div class="module-head">
+        <h3>Charger un fichier</h3>
+      </div>
+      <div class="module-body">
+        <form class="form-horizontal row-fluid" [formGroup]="productUploadForm" enctype="multipart/form-data">
+          <div class="control-group">
+            <label class="control-label" for="file">Charger le fichier produit</label>
+            <div class="controls">
+              <input type="file" id="file" (change)="uploadProductFile($event)"  class="span8" formControlName="products">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <!--/.content-->
+</div>
+<!--/.span9-->
+

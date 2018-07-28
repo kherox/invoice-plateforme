@@ -1,0 +1,36 @@
+<div class="content">
+    <div class="module message">
+        <div class="module-head">
+            <h3>
+                Message</h3>
+        </div>
+        <div class="module-option clearfix">
+            <div class="pull-left">
+                <div class="btn-group">
+                    <button class="btn">
+                        Inbox</button>
+                    <button class="btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Inbox(11)</a></li>
+                        <li><a href="#">Sent</a></li>
+                        <li><a href="#">Draft(2)</a></li>
+                        <li><a href="#">Trash</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pull-right">
+                <a routerLink="/inbox-compose" class="btn btn-primary">Compose</a>
+            </div>
+        </div>
+        <div class="module-body table">
+            <app-inbox-list></app-inbox-list>
+        </div>
+        <div class="module-foot">
+        </div>
+    </div>
+</div>
+                        <!--/.content-->

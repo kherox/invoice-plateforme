@@ -1,0 +1,98 @@
+<div class="content">
+
+	<div class="module">
+		<div class="module-head">
+			<h3>Flux d'actualité</h3>
+		</div>
+		<div class="module-body">
+			<div class="stream-composer media">
+				<a  class="media-avatar medium pull-left">
+					<img src="assets/images/user.png">
+				</a>
+				<form [formGroup]="postForm"  (ngSubmit)="createPost()">
+
+					<div class="media-body">
+						<div class="row-fluid">
+							<textarea
+							 name="content" 
+							 formControlName="content"
+							 class="span12" 
+							 style="height: 70px; resize: none;"
+							 >
+							</textarea>
+							
+						</div>
+						<div class="clearfix">
+							<button type="submit"  class="btn btn-primary pull-right">
+								Update blog
+							</button>
+							<a  class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Upload a photo">
+								<i class="icon-camera shaded"></i>
+							</a>
+							<a  class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Upload a video">
+								<i class="icon-facetime-video shaded"></i>
+							</a>
+							<a  class="btn btn-small" rel="tooltip" data-placement="top" data-original-title="Pin your location">
+								<i class="icon-map-marker shaded"></i>
+							</a>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="stream-list">
+				<div class="media stream new-update">
+					<a href="#">
+						<i class="icon-refresh shaded"></i>
+						11 updates
+					</a>
+				</div>
+
+				<div class="media stream" *ngFor="let post of posts">
+					<a href="#" class="media-avatar medium pull-left">
+						<img src="assets/images/user.png">
+					</a>
+					<div class="media-body">
+						<div class="stream-headline">
+							<h5 class="stream-author">
+								 {{ post.owner }}
+								<small>{{ post.created | date}}</small>
+							</h5>
+							<div class="stream-text">
+									{{post.content}}
+							</div>
+							<!-- <div class="stream-attachment photo">
+								<div class="responsive-photo">
+									<img src="assets/images/img.jpg" />
+								</div>
+							</div> -->
+						</div><!--/.stream-headline-->
+
+						<div class="stream-options">
+							<a href="#" class="btn btn-small">
+								<i class="icon-thumbs-up shaded"></i>
+								Like
+							</a>
+							<a href="#" class="btn btn-small">
+								<i class="icon-reply shaded"></i>
+								Reply
+							</a>
+							<a href="#" class="btn btn-small">
+								<i class="icon-retweet shaded"></i>
+								Repost
+							</a>
+						</div>
+					</div>
+				</div><!--/.media .stream-->
+
+				<div class="media stream load-more">
+					<a>
+						<i class="icon-refresh shaded"></i>
+						show more...
+					</a>
+				</div>
+			</div><!--/.stream-list-->
+		</div><!--/.module-body-->
+	</div><!--/.module-->
+	
+</div><!--/.content-->

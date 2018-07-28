@@ -1,0 +1,37 @@
+<div class="content">
+
+    <div class="module message">
+      <div class="module-head">
+        <h3>Gestion des taches</h3>
+      </div>
+      <div class="module-option clearfix">
+        <div class="pull-left">
+          Filter : &nbsp;
+          <div class="btn-group">
+            <button class="btn">All</button>
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">All</a></li>
+              <li><a href="#">In Progress</a></li>
+              <li><a href="#">Done</a></li>
+              <li class="divider"></li>
+              <li><a href="#">New task</a></li>
+              <li><a href="#">Overdue Task</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pull-right">
+          <a routerLink="/tasks-compose" class="btn btn-primary">Create Task</a>
+        </div>
+      </div>
+      <div class="module-body table">
+           <app-tasks-list></app-tasks-list>
+
+      </div>
+      <div class="module-foot">
+      </div>
+    </div>
+
+</div><!--/.content-->
